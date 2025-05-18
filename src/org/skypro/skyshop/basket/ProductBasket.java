@@ -3,55 +3,64 @@ package org.skypro.skyshop.basket;
 
 import org.skypro.skyshop.product.Product;
 
+
+
 public class ProductBasket {
+    private int index = 0;
     private int size = 0;
     private Product[] products = new Product[5];
-    public void add(Product product){
-        if(size == products.length) {
-            System.out.println("корзина переполнена");
+
+    public void add(Product product, int index) {
+        if (size == products.length ) {
+            System.out.println("Эта корзина переполнена");
         }
         for (int i = 0; i < products.length; i++) {
-            if(products[i] == null){
+            if (products[i] == null && index == i) {
                 products[i] = product;
                 size++;
             }
         }
     }
-    public int sum(){
+
+    public int sum() {
         int sum = 0;
         for (int i = 0; i < products.length; i++) {
-            if (products[i] != null){
+            if (products[i] != null) {
                 sum += products[i].getPrice();
             }
-
         }
         return sum;
     }
-    public  void  printProducts(){
+
+    public void printProducts() {
         for (int i = 0; i < products.length; i++) {
-            if(products[i] != null){
-                System.out.println( products[i].getName() + ":" + products[i].getPrice());
+            if (products[i] != null) {
+                System.out.println(products[i].getName() + ":" + products[i].getPrice());
+            }else {
+                System.out.println((String) null);
             }
         }
         System.out.println("итого: " + sum());
     }
-    public void checkProducts(){
-        boolean check = products != null;
+
+    public boolean checkProducts() {
         for (int i = 0; i < products.length; i++) {
-            if (check){
-                System.out.println("В корзине есть продукт");
+            if (products[i] != null) {
+                System.out.println("В корзине есть продукт " + products[i].getName());
             } else {
                 System.out.println("Это место свободно, можно положить продукт");
             }
-
-        }
+        }return false;
     }
-    public void noProducts(){
+    
+    public void noProduct(){
         for (int i = 0; i < products.length; i++) {
-            if(products[i] != null && size > 5){
-                System.out.println("null");
+            if (products[i] != null && products.length > 0){
+                products[i] = null;
+                System.out.println((String) null);
+
             }
         }
+        System.out.println("Итого: " + sum());
     }
 }
-
