@@ -2,7 +2,7 @@ package org.skypro.skyshop.basket;
 
 
 import org.skypro.skyshop.product.Product;
-
+import org.skypro.skyshop.product.SimpleProduct;
 
 
 public class ProductBasket {
