@@ -8,8 +8,11 @@ public class DiscountedProduct extends Product{
         this.basePrice = basePrice;
         this.discountInPercent = discountInPercent;
     }
+    public void changedPrice(){
+        this.basePrice = basePrice + (basePrice*discountInPercent);
+    }
     @Override
     public int getPrice() {
-        return getPrice();
+        return basePrice;
     }
 }

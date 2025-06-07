@@ -1,16 +1,15 @@
 package org.skypro.skyshop.basket;
 
 
-import org.skypro.skyshop.product.Product;
 import org.skypro.skyshop.product.SimpleProduct;
 
 
 public class ProductBasket {
     private int index = 0;
     private int size = 0;
-    private Product[] products = new Product[5];
+    private SimpleProduct[] products = new SimpleProduct[5];
 
-    public void add(Product product, int index) {
+    public void add(SimpleProduct product, int index) {
         if (size == products.length ) {
             System.out.println("Эта корзина переполнена");
         }
