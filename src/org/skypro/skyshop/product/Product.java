@@ -15,5 +15,6 @@ public abstract class Product {
     }
 
     public abstract int getPrice();
+    public abstract String toString();
 
 }

@@ -15,4 +15,8 @@ public class DiscountedProduct extends Product{
     public int getPrice() {
         return basePrice;
     }
+    @Override
+    public String toString(){
+        return getName() + ": " + basePrice + (discountInPercent + "%");
+    }
 }
