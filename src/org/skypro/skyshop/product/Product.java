@@ -2,7 +2,7 @@ package org.skypro.skyshop.product;
 
 public abstract class Product {
 
-   private String name;
+   protected String name;
 
 
     public Product (String name){
@@ -16,5 +16,6 @@ public abstract class Product {
 
     public abstract int getPrice();
     public abstract String toString();
+    public abstract boolean isSpecial();
 
 }

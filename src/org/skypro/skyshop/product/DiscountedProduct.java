@@ -17,6 +17,11 @@ public class DiscountedProduct extends Product{
     }
     @Override
     public String toString(){
-        return getName() + ": " + basePrice + (discountInPercent + "%");
+        return name + ": " + basePrice + (discountInPercent + "%");
+    }
+    @Override
+    public boolean isSpecial() {
+        System.out.println(name!=null);
+        return false;
     }
 }
