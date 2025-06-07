@@ -21,7 +21,6 @@ public class SimpleProduct extends Product {
 
     @Override
     public boolean isSpecial() {
-        System.out.println(name!=null);
         return false;
     }
 }

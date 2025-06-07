@@ -8,20 +8,16 @@ public class DiscountedProduct extends Product{
         this.basePrice = basePrice;
         this.discountInPercent = discountInPercent;
     }
-    public void changedPrice(){
-        this.basePrice = basePrice + (basePrice*discountInPercent);
-    }
     @Override
     public int getPrice() {
-        return basePrice;
+        return basePrice= basePrice - (basePrice*discountInPercent);
     }
     @Override
-    public String toString(){
+    public  String toString(){
         return name + ": " + basePrice + (discountInPercent + "%");
     }
     @Override
     public boolean isSpecial() {
-        System.out.println(name!=null);
-        return false;
+        return true;
     }
 }
