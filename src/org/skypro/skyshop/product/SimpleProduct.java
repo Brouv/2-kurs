@@ -4,8 +4,11 @@ public class SimpleProduct extends Product {
     private int price;
 
     public SimpleProduct(String name, int price) {
-        super(name);
-        this.price = price;
+            super(name);
+            if (price <= 0) {
+                throw new IllegalArgumentException("Цена должна быть строго больше 0");
+            }
+            this.price = price;
     }
 
 
@@ -16,7 +19,7 @@ public class SimpleProduct extends Product {
 
     @Override
     public String toString() {
-        return name + ": " + price;
+        return name + ": " + price + " рублей.";
     }
 
     @Override
