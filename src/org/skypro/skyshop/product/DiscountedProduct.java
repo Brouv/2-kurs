@@ -10,11 +10,11 @@ public class DiscountedProduct extends Product{
     }
     @Override
     public int getPrice() {
-        return basePrice= basePrice - (basePrice*discountInPercent);
+        return basePrice= basePrice - ( 1- (basePrice / discountInPercent));
     }
     @Override
     public  String toString(){
-        return name + ": " + basePrice + (discountInPercent + "%");
+        return name + ": " + basePrice + " рублей." + (" Скидка " + discountInPercent + " %.");
     }
     @Override
     public boolean isSpecial() {

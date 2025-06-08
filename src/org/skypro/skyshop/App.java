@@ -1,17 +1,18 @@
 package org.skypro.skyshop;
 
 import org.skypro.skyshop.basket.ProductBasket;
+import org.skypro.skyshop.product.Product;
 import org.skypro.skyshop.product.SimpleProduct;
 
 public class App {
     public static void main(String[] args){
 
-        SimpleProduct orange = new SimpleProduct("Апельсин" , 30);
-        SimpleProduct cheese = new SimpleProduct("Сыр", 170);
-        SimpleProduct buckwheat = new SimpleProduct("Гречка", 60);
-        SimpleProduct sausage = new SimpleProduct("Колбаса", 250);
-        SimpleProduct chicken = new SimpleProduct("Курица", 260);
-        SimpleProduct cabbage = new SimpleProduct("Капуста", 100);
+        Product orange = new SimpleProduct("Апельсин" , 30);
+        Product cheese = new SimpleProduct("Сыр", 170);
+        Product buckwheat = new SimpleProduct("Гречка", 60);
+        Product sausage = new SimpleProduct("Колбаса", 250);
+        Product chicken = new SimpleProduct("Курица", 260);
+        Product cabbage = new SimpleProduct("Капуста", 100);
         System.out.println();
 
 
